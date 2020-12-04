@@ -145,19 +145,19 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('page.index') }}" class="nav-link disabled">
+                        <a href="{{ route('ip.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-desktop"></i>
                             <p>IP адреса<i class="right fas fa-angle-left"></i></p>
                         </a>
                         <ul class="nav nav-treeview nav-compact">
                             <li class="nav-item">
-                                <a href="{{ route('page.index') }}" class="nav-link">
+                                <a href="{{ route('ip.index') }}" class="nav-link">
                                     <i class="fas fa-copy"></i>
                                     <p>Список IP адресов</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('page.create') }}" class="nav-link">
+                                <a href="{{ route('ip.create') }}" class="nav-link">
                                     <i class="fas fa-plus"></i>
                                     <p>Добавить IP адрес</p>
                                 </a>

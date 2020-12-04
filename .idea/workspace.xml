@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84ba1d0-788f-4e05-a6cc-9d8c12363fe2" name="Default Changelist" comment="" />
+    <list default="true" id="e84ba1d0-788f-4e05-a6cc-9d8c12363fe2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IpaddressController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Ipaddress.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_163710_create_ipaddresses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +33,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -142,25 +155,30 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kE4Yk91PnJzFu3EeeOOV6K6AAX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\kazna\app\Http\Controllers\Admin" />
+      <recent name="C:\OpenServer\domains\kazna\resources\views\user" />
+      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins" />
+      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\dist\js" />
+      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins\bootstrap\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\kazna\public" />
       <recent name="C:\OpenServer\domains\kazna\resources\views\admin\worker" />
       <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins" />
       <recent name="C:\OpenServer\domains\kazna\resources\views\admin\otdel" />
       <recent name="C:\OpenServer\domains\kazna\public\assets\admin\dist\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\kazna\resources\views\user" />
-      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins" />
-      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\dist\js" />
-      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins\bootstrap\js" />
-      <recent name="C:\OpenServer\domains\kazna\public\assets\admin\plugins\jquery" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,10 +225,25 @@
       <workItem from="1606822334310" duration="3248000" />
       <workItem from="1606848685969" duration="8649000" />
       <workItem from="1606928192365" duration="963000" />
+      <workItem from="1607009073107" duration="5873000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

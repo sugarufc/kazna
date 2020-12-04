@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>'admin'], function(){
     Route::get('/', 'OtdelController@index')->name('admin.index');
+    Route::resource('/ip', 'IpaddressController');
     Route::resource('/otdel', 'OtdelController');
-    Route::get('/worker/{$id}', 'WorkerController@show')->name('show');
     Route::resource('/worker', 'WorkerController');
     Route::resource('/page', 'PageController');
+
+    Route::get('/worker/{$id}', 'WorkerController@show')->name('show');
 });
 
 Route::get('/admin/settings', 'PhonebookController@index')->name('settings');
