@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkersTable extends Migration
+class CreateTableWorkers extends Migration
 {
     /**
      * Run the migrations.
@@ -17,9 +17,10 @@ class CreateWorkersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('special');
-            $table->string('vts');
-            $table->string('gts');
-            $table->string('kab');
+            $table->integer('vts');
+            $table->integer('gts');
+            $table->integer('kab');
+            $table->integer('sort');
             $table->tinyInteger('otdel_id');
             $table->timestamps();
         });
