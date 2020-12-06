@@ -24,11 +24,6 @@
                     </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <div class="col-md-2">
-                <a href="{{ route('otdel.create') }}">
-                    <button type="button" class="btn btn-block bg-gradient-primary mb-3">Добавить отдел</button>
-                </a>
-            </div>
             @if(count($otdels))
             <table class="table table-bordered">
                 <thead>
@@ -77,10 +72,10 @@
                 </tbody>
             </table>
             @else
-            <div class="col-md-2">
+            <div class="col-md-12">
                 <p>Список отделов пуст...</p>
                 <a href="{{ route('otdel.create') }}">
-                    <button type="button" class="btn btn-block bg-gradient-primary">Добавить отдел</button>
+                    <button type="button" class="btn btn-block bg-gradient-primary col-2">Добавить отдел</button>
                 </a>
             </div>
             @endif

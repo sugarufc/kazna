@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84ba1d0-788f-4e05-a6cc-9d8c12363fe2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IpaddressController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Ipaddress.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_163710_create_ipaddresses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_084009_create_pages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_105037_create_workers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_105037_create_workers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_30_183308_alter_table_users_add_isadmin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/ip/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ip/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/otdel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/otdel/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/worker/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/worker/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -226,6 +230,7 @@
       <workItem from="1606848685969" duration="8649000" />
       <workItem from="1606928192365" duration="963000" />
       <workItem from="1607009073107" duration="5873000" />
+      <workItem from="1607243391332" duration="2602000" />
     </task>
     <servers />
   </component>
@@ -237,7 +242,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

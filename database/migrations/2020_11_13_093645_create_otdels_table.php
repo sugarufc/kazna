@@ -17,6 +17,7 @@ class CreateOtdelsTable extends Migration
             $table->increments('id');
             $table->string('f_name');
             $table->string('s_name');
+            $table->integer('parent_id')->default(0);
             $table->string('slug')->unique();
             $table->integer('sort')->default('500')->unsigned();
             $table->timestamps();

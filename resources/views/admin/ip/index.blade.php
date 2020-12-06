@@ -70,10 +70,10 @@
                                 </tfoot>
                             </table>
                         @else
-                            <div class="col-md-2">
+                            <div class="col-md-12">
                                 <p>Список IP адресов пуст...</p>
                                 <a href="{{ route('ip.create') }}">
-                                    <button type="button" class="btn btn-block bg-gradient-primary">Добавить IP адрес</button>
+                                    <button type="button" class="btn btn-block bg-gradient-primary col-2">Добавить IP адрес</button>
                                 </a>
                             </div>
                         @endif

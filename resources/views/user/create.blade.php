@@ -43,7 +43,7 @@
             <form action="{{ route('register.store') }}" method="post">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Full name" name="name" value="{{ old('name') }}">
+                    <input type="text" class="form-control" placeholder="Имя" name="name" value="{{ old('name') }}">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <input type="password" class="form-control" placeholder="Пароль" name="password">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="password_confirmation" placeholder="Retype password">
+                    <input type="password" class="form-control" name="password_confirmation" placeholder="Повторите пароль">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>

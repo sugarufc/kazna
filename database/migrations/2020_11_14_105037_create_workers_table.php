@@ -14,14 +14,12 @@ class CreateWorkersTable extends Migration
     public function up()
     {
         Schema::create('workers', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->string('name');
-            $table->string('special', 100);
-            $table->unsignedSmallInteger('vts');
-            $table->unsignedSmallInteger('gts');
-            $table->unsignedSmallInteger('kab')->unsigned();
-            $table->string('pc_name', 20);
-            $table->boolean('ammy')->default(false);
+            $table->string('special');
+            $table->string('vts');
+            $table->string('gts');
+            $table->string('kab');
             $table->tinyInteger('otdel_id');
             $table->timestamps();
         });

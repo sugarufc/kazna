@@ -19,7 +19,6 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>'admin'], f
     Route::resource('/otdel', 'OtdelController');
     Route::resource('/worker', 'WorkerController');
     Route::resource('/page', 'PageController');
-
     Route::get('/worker/{$id}', 'WorkerController@show')->name('show');
 });
 

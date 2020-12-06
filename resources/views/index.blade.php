@@ -27,7 +27,8 @@
                                 </li>
                             @endif
                         @endforeach
-                        <li class="nav-item">
+                        @if(count($otdels))
+                            <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-minus"></i>
                                 <p>ТОФК<i class="right fas fa-angle-left"></i></p>
@@ -45,6 +46,7 @@
                                 @endforeach
                             </ul>
                         </li>
+                        @endif
                     </ul>
                 </li>
             </ul>
@@ -125,7 +127,7 @@
                                 </tfoot>
                             </table>
                         @else
-                            <div class="col-md-2">
+                            <div class="col-md-12">
                                 <p>Список сотрудников пуст...</p>
                             </div>
                         @endif

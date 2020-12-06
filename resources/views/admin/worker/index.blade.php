@@ -82,10 +82,10 @@
                                 </tfoot>
                             </table>
                             @else
-                                <div class="col-md-2">
+                                <div class="col-md-12">
                                     <p>Список сотрудников пуст...</p>
                                     <a href="{{ route('worker.create') }}">
-                                        <button type="button" class="btn btn-block bg-gradient-primary">Добавить сотрудника</button>
+                                        <button type="button" class="btn btn-block bg-gradient-primary col-2">Добавить сотрудника</button>
                                     </a>
                                 </div>
                             @endif

@@ -124,7 +124,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview danger">
                         <a href="{{ route('page.index') }}" class="nav-link disabled">
                             <i class="nav-icon fas fa-window-restore"></i>
                             <p>Страницы<i class="right fas fa-angle-left"></i></p>
