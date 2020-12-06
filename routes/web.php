@@ -19,7 +19,6 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>'admin'], f
     Route::resource('/otdel', 'OtdelController');
     Route::resource('/worker', 'WorkerController');
     Route::resource('/page', 'PageController');
-
     Route::get('/worker/{$id}', 'WorkerController@show')->name('show');
 });
 
@@ -29,6 +28,7 @@ Route::get('/', 'MainController@index')->name('home');
 Route::get('/workers', 'MainController@workers')->name('workers');
 Route::get('/workers/{id}', 'MainController@worker')->name('worker');
 Route::get('/otdel/{id}', 'PhonebookController@otdel')->name('otdel');
+Route::get('/ip', 'MainController@ip')->name('ip');
 
 Route::group(['middleware'=>'guest'], function (){
     Route::get('/register', 'UserController@create')->name('register.create');

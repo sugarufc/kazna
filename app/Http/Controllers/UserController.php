@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function create()
     {
-        return redirect()->route('login');
+        //return redirect()->route('login');
         return view('user.create');
     }
 
@@ -29,7 +29,7 @@ class UserController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        session()->flash('success', 'Успешно');
+        session()->flash('success', 'Реистрация прошла успешно');
         Auth::login($user);
         return redirect()->route('admin.index');
     }

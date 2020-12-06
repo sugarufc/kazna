@@ -15,7 +15,7 @@ class IpaddressController extends Controller
      */
     public function index()
     {
-        $ip = Ipaddress::all();
+        $ip = Ipaddress::all()->sortBy('ip');
         return view('admin.ip.index', compact('ip'));
     }
 
@@ -37,9 +37,9 @@ class IpaddressController extends Controller
      */
     public function store(Request $request)
     {
-
-
-        dd($request->all());
+        Ipaddress::create($request->all());
+        $request->session()->flash('success', 'Данные успешно добавлены');
+        return redirect()->route('ip.index');
     }
 
     /**
@@ -61,7 +61,8 @@ class IpaddressController extends Controller
      */
     public function edit($id)
     {
-        return __METHOD__;
+        $ip = Ipaddress::find($id);
+        return view('admin.ip.edit', compact('ip'));
     }
 
     /**
@@ -73,7 +74,9 @@ class IpaddressController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return __METHOD__;
+        $ip = Ipaddress::find($id);
+        $ip->update($request->all());
+        return redirect()->route('ip.index')->with('success','Данные успешно сохранены');
     }
 
     /**
@@ -84,6 +87,8 @@ class IpaddressController extends Controller
      */
     public function destroy($id)
     {
-        return __METHOD__;
+        $ip = Ipaddress::find($id);
+        $ip->delete();
+        return redirect()->route('ip.index')->with('success', 'Сотрудник успешно удален!');
     }
 }

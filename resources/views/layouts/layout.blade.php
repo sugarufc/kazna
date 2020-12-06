@@ -58,7 +58,30 @@
 
         <!-- Sidebar -->
         <div class="sidebar">
-            @yield('sidebar')
+            @section('sidebar')
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item">
+                        <a href="{{ route('home') }}" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p>Главная</p>
+                        </a>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{ route('workers') }}" class="nav-link">
+                            <i class="nav-icon fas fa-building"></i>
+                            <p>Отделы<i class="right fas fa-angle-left"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('ip') }}" class="nav-link">
+                            <i class="nav-icon fas fa-desktop"></i>
+                            <p>IP адреса</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            @show
         </div>
         <!-- /.sidebar -->
     </aside>

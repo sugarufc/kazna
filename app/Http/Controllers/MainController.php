@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Ipaddress;
 use App\Otdel;
 use App\Worker;
 use Illuminate\Http\Request;
@@ -28,5 +29,11 @@ class MainController extends Controller
         $otdels = Otdel::all()->sortBy('sort');
         $otd_name = Otdel::find($id);
         return view('index', compact('workers',  'otd_name','otdels'));
+    }
+
+    public function ip()
+    {
+        $ip = Ipaddress::all();
+        return view('ip', compact('ip'));
     }
 }

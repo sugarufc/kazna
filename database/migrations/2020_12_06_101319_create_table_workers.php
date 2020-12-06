@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkersTable extends Migration
+class CreateTableWorkers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,14 @@ class CreateWorkersTable extends Migration
     public function up()
     {
         Schema::create('workers', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->string('name');
-            $table->string('special', 100);
-            $table->unsignedSmallInteger('vts');
-            $table->unsignedSmallInteger('gts');
-            $table->unsignedSmallInteger('kab')->unsigned();
-            $table->string('pc_name', 20);
-            $table->boolean('ammy')->default(false);
-            $table->tinyInteger('otdel_id1');
+            $table->string('special');
+            $table->integer('vts');
+            $table->integer('gts');
+            $table->integer('kab');
+            $table->integer('sort');
+            $table->tinyInteger('otdel_id');
             $table->timestamps();
         });
     }

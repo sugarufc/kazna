@@ -27,7 +27,8 @@
                                 </li>
                             @endif
                         @endforeach
-                        <li class="nav-item">
+                        @if(count($otdels))
+                            <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-minus"></i>
                                 <p>ТОФК<i class="right fas fa-angle-left"></i></p>
@@ -45,7 +46,14 @@
                                 @endforeach
                             </ul>
                         </li>
+                        @endif
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('ip') }}" class="nav-link">
+                        <i class="nav-icon fas fa-desktop"></i>
+                        <p>IP адреса</p>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -65,7 +73,6 @@
             </div>
         </div>
     @endif
-
     <!-- Main content -->
     <section class="content">
         <div class="row">
@@ -125,7 +132,7 @@
                                 </tfoot>
                             </table>
                         @else
-                            <div class="col-md-2">
+                            <div class="col-md-12">
                                 <p>Список сотрудников пуст...</p>
                             </div>
                         @endif
