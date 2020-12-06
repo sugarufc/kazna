@@ -22,7 +22,7 @@ class CreateWorkersTable extends Migration
             $table->unsignedSmallInteger('kab')->unsigned();
             $table->string('pc_name', 20);
             $table->boolean('ammy')->default(false);
-            $table->tinyInteger('otdel_id');
+            $table->tinyInteger('otdel_id1');
             $table->timestamps();
         });
     }
