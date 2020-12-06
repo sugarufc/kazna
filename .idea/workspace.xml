@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84ba1d0-788f-4e05-a6cc-9d8c12363fe2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IpaddressController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Ipaddress.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_163710_create_ipaddresses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/ip/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +217,7 @@
       <workItem from="1606822334310" duration="3248000" />
       <workItem from="1606848685969" duration="8649000" />
       <workItem from="1606928192365" duration="963000" />
-      <workItem from="1607009073107" duration="5873000" />
+      <workItem from="1607009073107" duration="6670000" />
     </task>
     <servers />
   </component>
