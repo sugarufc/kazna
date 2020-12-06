@@ -37,6 +37,14 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="{{ route('home') }}" class="nav-link">Главная</a>
             </li>
+            <li class="nav-item d-none d-sm-inline-block dropdown">
+                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">СКИАО</a>
+                <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                    <li><a href="#" class="dropdown-item">СКИАО СПД</a></li>
+                    <li><a href="#" class="dropdown-item">СКИАО ГГС</a></li>
+                    <li><a href="#" class="dropdown-item">Правовая работа</a></li>
+                </ul>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item d-none d-sm-inline-block">
