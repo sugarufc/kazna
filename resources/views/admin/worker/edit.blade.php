@@ -24,18 +24,24 @@
                     @enderror
                 <!-- /.input group -->
                 </div>
+
                 <div class="form-group">
-                    <div class="input-group">
+                    <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
                         </div>
-                        <input type="text" required name="special" class="@error('special') is-invalid @enderror form-control" value="@if(old('special')) {{old('special')}} @else {{ $worker->special }} @endif" placeholder="Должность">
+                        <select name="special_id" required id="special_id" class="form-control select2bs4 @error('special_id') is-invalid @enderror custom-select">
+                            @foreach($specials as $k=>$v)
+                                <option value="{{ $k }}" @if($k === $worker->special->id) selected @endif>{{ $v }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                    @error('special')
-                        <label class="col-form-label text-danger" for="special"><i class="far fa-times-circle"></i> {{ $message }}</label>
-                    @enderror
+                    @error('special_id')
+                    <label class="col-form-label text-danger" for="inputError"><i class="far fa-times-circle"></i> {{ $message }}</label>
+                @enderror
                 <!-- /.input group -->
                 </div>
+
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">

@@ -23,15 +23,21 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <div class="input-group">
+                    <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
                         </div>
-                        <input type="text" required name="special" class="@error('special') is-invalid @enderror form-control" value="{{ old('special') }}" placeholder="Должность">
+                        <select name="special_id" required id="special_id" class="form-control select2bs4 @error('special_id') is-invalid @enderror custom-select">
+                            <option value="" disabled selected>Должность</option>
+                            @foreach($specials as $k=>$v)
+                                <option value="{{ $k }}">{{ $v }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                    @error('special')
-                        <label class="col-form-label text-danger" for="special"><i class="far fa-times-circle"></i> {{ $message }}</label>
+                    @error('special_id')
+                        <label class="col-form-label text-danger" for="inputError"><i class="far fa-times-circle"></i> {{ $message }}</label>
                     @enderror
+                <!-- /.input group -->
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -55,17 +61,6 @@
                         <label class="col-form-label text-danger" for="inputError"><i class="far fa-times-circle"></i> {{ $message }}</label>
                     @enderror
                 </div>
-{{--                <div class="form-group">--}}
-{{--                    <div class="input-group">--}}
-{{--                        <div class="input-group-prepend">--}}
-{{--                            <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>--}}
-{{--                        </div>--}}
-{{--                        <input type="text" name="mobile" class="@error('mobile') is-invalid @enderror form-control" placeholder="Мобильный" value="{{ old('mobile') }}" data-inputmask='"mask": "(999) 999-9999"' data-mask>--}}
-{{--                    </div>--}}
-{{--                    @error('mobile')--}}
-{{--                        <label class="col-form-label text-danger" for="inputError"><i class="far fa-times-circle"></i> {{ $message }}</label>--}}
-{{--                    @enderror--}}
-{{--                </div>--}}
                 <div class="form-group">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
@@ -93,7 +88,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-laptop-house"></i></span>
                         </div>
-                        <input type="text" name="kab" placeholder="Кабинет" value="{{ old('kab') }}" class="@error('kab') is-invalid @enderror form-control" data-inputmask='"mask": "999"' data-mask>
+                        <input type="text" name="kab" placeholder="Кабинет" value="{{ old('kab')}}" class="@error('kab') is-invalid @enderror form-control">
                     </div>
                     @error('kab')
                         <label class="col-form-label text-danger" for="inputError"><i class="far fa-times-circle"></i> {{ $message }}</label>

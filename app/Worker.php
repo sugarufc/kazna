@@ -16,7 +16,7 @@ class Worker extends Model
 {
     use Sluggable;
 
-    protected $fillable = ['name', 'special', 'vts', 'gts', 'kab', 'sort', 'slug', 'otdel_id'];
+    protected $fillable = ['name', 'special', 'vts', 'gts', 'kab', 'sort', 'slug', 'otdel_id', 'special_id'];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -32,8 +32,14 @@ class Worker extends Model
         ];
     }
 
-    public function otdel(){
+    public function otdel()
+    {
         return $this->belongsTo(Otdel::class);
+    }
+
+    public function special()
+    {
+        return $this->belongsTo(Special::class);
     }
 
 

@@ -165,7 +165,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('settings') }}" class="nav-link disabled">
+                        <a href="{{ route('settings') }}" class="nav-link">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Настройки</p>
                         </a>
@@ -179,6 +179,20 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
+        @if(session()->has('success'))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 pt-3 m-auto">
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5 class="mb-0"><i class="icon fas fa-check"></i>{{session('success')}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
         @yield('content')
     </div>
     <!-- /.content-wrapper -->

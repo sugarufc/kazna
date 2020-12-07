@@ -18,12 +18,12 @@ class WorkerController extends Controller
      */
     public function index()
     {
-        $workers = Worker::with('otdel')->get()->sortBy('name');
+        $workers = Worker::with('otdel','special')->get()->sortBy('special.sort');
         return view('admin.worker.index', compact('workers'));
     }
 
     public function show($id){
-        $workers = Worker::with('otdel')->get()->where('otdel_id', $id)->sortBy('sort');
+        $workers = Worker::with('otdel', 'special')->get()->where('otdel_id', $id)->sortBy('sort')->sortBy('special.sort');
         $otdel = Otdel::find($id);
         return view('admin.worker.show', compact('workers', 'otdel'));
     }
@@ -36,7 +36,8 @@ class WorkerController extends Controller
     public function create()
     {
         $otdels = DB::table('otdels')->pluck('f_name','id');
-        return view('admin.worker.create', compact('otdels'));
+        $specials = DB::table('specials')->orderBy('sort')->pluck('name','id');
+        return view('admin.worker.create', compact('otdels', 'specials'));
     }
 
     /**
@@ -49,7 +50,6 @@ class WorkerController extends Controller
     {
         $rules = [
             'name' => 'required|max:255',
-            'special' => 'required|max:255',
             'vts' => 'nullable|max:14',
             'gts' => 'nullable|max:14',
             'kab' => 'nullable|max:4',
@@ -59,7 +59,6 @@ class WorkerController extends Controller
 
         $messages = [
             'name.required' => 'Поле обязательно для заполнения',
-            'special.required' => 'Поле обязательно для заполнения',
         ];
 
         $validateData = Validator::make($request->all(), $rules, $messages)->validate();
@@ -79,7 +78,8 @@ class WorkerController extends Controller
     {
         $worker = Worker::find($id);
         $otdels = DB::table('otdels')->pluck('f_name','id');
-        return view('admin.worker.edit', compact('worker', 'otdels'));
+        $specials = DB::table('specials')->orderBy('sort')->pluck('name','id');
+        return view('admin.worker.edit', compact('worker', 'otdels', 'specials'));
     }
 
     /**
@@ -93,17 +93,14 @@ class WorkerController extends Controller
     {
         $rules = [
             'name' => 'required|max:255',
-            'special' => 'required|max:255',
             'vts' => 'nullable|max:14',
-            'gts' => 'nullable|max:14',
             'kab' => 'nullable|max:4',
-            'sort' => 'integer|max:500',
+            'sort' => 'nullable|max:3',
             'slug' => 'nullable|max:10',
         ];
 
         $messages = [
             'name.required' => 'Поле обязательно для заполнения',
-            'special.required' => 'Поле обязательно для заполнения',
             'sort.integer' => 'Введите число от 0 до 500',
             'sort.max' => 'Введите число от 0 до 500',
         ];

@@ -1,19 +1,6 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    @if(session()->has('success'))
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 pt-3 m-auto">
-                    <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h5><i class="icon fas fa-check"></i>{{session('success')}}</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
-
     <!-- Main content -->
     <section class="content">
         <div class="row">

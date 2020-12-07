@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableWorkers extends Migration
+class CreateSpecialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateTableWorkers extends Migration
      */
     public function up()
     {
-        Schema::create('workers', function (Blueprint $table) {
+        Schema::create('specials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('special_id')->nullable()->unsigned();
-            $table->integer('vts');
-            $table->integer('gts');
-            $table->integer('kab');
             $table->integer('sort')->default(500)->unsigned();
-            $table->tinyInteger('otdel_id');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ class CreateTableWorkers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workers');
+        Schema::dropIfExists('specials');
     }
 }

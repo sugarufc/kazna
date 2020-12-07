@@ -1,19 +1,6 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    @if(session()->has('success'))
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 pt-3 m-auto">
-                    <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h5><i class="icon fas fa-check"></i>{{session('success')}}</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
-
     <!-- Main content -->
         <section class="content">
             <div class="row">
@@ -35,7 +22,6 @@
                                     <th>ГТС</th>
                                     <th>Отдел</th>
                                     <th>Каб №</th>
-                                    <th>Sort</th>
                                     <th>Действие</th>
                                 </tr>
                                 </thead>
@@ -47,12 +33,11 @@
                                     <tr>
                                         <td>{{ $i }}</td>
                                         <td><a href="{{ route('worker.edit', $worker->id) }}">{{ $worker->name }}</a></td>
-                                        <td>{{ $worker->special }}</td>
+                                        <td>{{ $worker->special->name }}</td>
                                         <td>{{ $worker->vts }}</td>
                                         <td>{{ $worker->gts }}</td>
                                         <td class="text-uppercase"><a href="{{ route('show', $worker->otdel->id) }}">{{ $worker->otdel->s_name }}</a></td>
                                         <td>{{ $worker->kab }}</td>
-                                        <td>{{ $worker->sort }}</td>
                                         <td>
                                             <a href="{{ route('worker.edit', $worker->id) }}" class="btn btn-info btn-sm float-left mr-1"><i class="fas fa-pencil-alt"></i></a>
                                             <form action="{{ route('worker.destroy', $worker->id) }}" method="post" class="float-left">
@@ -76,7 +61,6 @@
                                     <th>ГТС</th>
                                     <th>Отдел</th>
                                     <th>Каб №</th>
-                                    <th>Sort</th>
                                     <th>Действие</th>
                                 </tr>
                                 </tfoot>

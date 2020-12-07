@@ -18,14 +18,14 @@ class MainController extends Controller
 
     public function workers()
     {
-        $workers = Worker::with('otdel')->get()->sortBy('name');
+        $workers = Worker::with('otdel', 'special')->get()->sortBy('special.sort');
         $otdels = Otdel::all()->sortBy('sort');
         return view('index', compact('workers', 'otdels'));
     }
 
     public function worker($id)
     {
-        $workers = Worker::with('otdel')->get()->where('otdel_id', $id)->sortBy('sort');
+        $workers = Worker::with('otdel')->get()->where('otdel_id', $id)->sortBy('special.sort');
         $otdels = Otdel::all()->sortBy('sort');
         $otd_name = Otdel::find($id);
         return view('index', compact('workers',  'otd_name','otdels'));
