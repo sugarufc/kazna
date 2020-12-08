@@ -7,12 +7,12 @@
                 <div class="col-12">
                     <div class="card mt-2">
                         <div class="card-header">
-                            <h3 class="card-title"><strong>{{ $otdel->f_name  }} ФК по РД</strong></h3>
+                            <h3 class="card-title"><strong>{{ $otdel->f_name  }} <span class="text-uppercase">({{ $otdel->s_name }})</span></strong></h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if(count($workers))
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="example1" class="table table-bordered table-striped table-hover">
                                 <thead>
                                 <tr>
                                     <th>#</th>

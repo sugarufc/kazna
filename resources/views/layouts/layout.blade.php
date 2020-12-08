@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('assets/admin') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/admin') }}/dist/css/adminlte.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css') }}/style.css">
     <!-- Tempusdominus Bbootstrap 4 -->
     <link rel="stylesheet" href="{{ asset('assets/admin') }}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- Select2 -->
@@ -135,7 +137,24 @@
     });
 
     $(function () {
-        $("#example1").DataTable();
+        $("#example1").DataTable({
+            "fnDrawCallback": function(oSettings) {
+                if ($('#example1_paginate li').length < 6) {
+                    $('.dataTables_paginate').hide();
+                }else{
+                    $('.dataTables_paginate').show();
+                }},
+            "pagingType": "full_numbers",
+            "pageLength" : 20,
+            "language": {
+                "lengthMenu": 'Показать <select class="custom-select custom-select-sm form-control form-control-sm">'+
+                    '<option value="10">10</option>'+
+                    '<option value="50">50</option>'+
+                    '<option value="-1">Все</option>'+
+                    '</select>',
+            },
+            "info": false,
+        });
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,

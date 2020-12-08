@@ -65,7 +65,7 @@ class WorkerController extends Controller
 
         Worker::create($request->all());
         $request->session()->flash('success', 'Данные успешно добавлены');
-        return redirect()->route('worker.index');
+        return redirect(session('links')[2]); // Will redirect 2 links back // see AdminMiddleware
     }
 
     /**
@@ -109,7 +109,7 @@ class WorkerController extends Controller
 
         $worker = Worker::find($id);
         $worker->update($request->all());
-        return redirect()->route('show', $worker->otdel_id)->with('success', 'Данные успешно сохранены');
+        return redirect(session('links')[2])->with('success', 'Данные успешно сохранены');
     }
 
     /**
@@ -122,6 +122,6 @@ class WorkerController extends Controller
     {
         $worker = Worker::find($id);
         $worker->delete();
-        return redirect()->route('show', $worker->otdel_id)->with('success', 'Сотрудник успешно удален!');
+        return redirect()->back()->with('success', 'Сотрудник успешно удален!');
     }
 }

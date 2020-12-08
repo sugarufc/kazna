@@ -12,7 +12,7 @@
         <!-- /.card-header -->
         <div class="card-body">
             @if(count($otdels))
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
                     <th style="width: 10px">#</th>

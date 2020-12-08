@@ -1,6 +1,21 @@
 @extends('admin.layouts.layout')
 
 @section('content')
+    @php
+        $urls = array();
+          if(Session::has('links')){
+             $urls[] = Session::get('links');
+          }
+
+    //dd($_SERVER);
+    @endphp
+
+
+
+
+
+
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">

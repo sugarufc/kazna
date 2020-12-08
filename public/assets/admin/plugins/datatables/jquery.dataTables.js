@@ -11492,7 +11492,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Показ с _START_ по _END_ из _TOTAL_ элементов",
+			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
 
 
 			/**
@@ -11654,7 +11654,7 @@
 			 *    } );
 			 */
 
-			"sLengthMenu": "Показать _MENU_ элементов",
+			"sLengthMenu": "Display _MENU_ records",
 
 
 			/**
@@ -11745,7 +11745,7 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.searchPlaceholder
 			 */
-			"sSearchPlaceholder": "",
+			"sSearchPlaceholder": "Найти",
 
 
 			/**

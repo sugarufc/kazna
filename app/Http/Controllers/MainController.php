@@ -25,7 +25,7 @@ class MainController extends Controller
 
     public function worker($id)
     {
-        $workers = Worker::with('otdel')->get()->where('otdel_id', $id)->sortBy('special.sort');
+        $workers = Worker::with('otdel', 'special')->get()->where('otdel_id', $id)->sortBy('sort')->sortBy('special.sort');
         $otdels = Otdel::all()->sortBy('sort');
         $otd_name = Otdel::find($id);
         return view('index', compact('workers',  'otd_name','otdels'));
